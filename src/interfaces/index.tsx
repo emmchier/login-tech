@@ -3,3 +3,7 @@ export interface PageTypes {
   description: string;
   keywords?: string;
 }
+
+export interface IconTypes {
+  color?: string;
+}

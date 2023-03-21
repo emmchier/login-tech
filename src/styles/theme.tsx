@@ -35,6 +35,7 @@ export const theme = {
     error: '#D52F1A',
     active: '#649FD6',
     white: '#FFFFFF',
+    grey: '#696969',
     background: {
       overlay: 'rgba(255, 255, 255, 0.85)',
     },
