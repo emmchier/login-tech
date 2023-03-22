@@ -5,6 +5,7 @@ import { theme } from '../../../styles/theme';
 export const Brand: FC = () => {
   return (
     <svg
+      aria-label="Brand icon"
       width="41"
       height="41"
       viewBox="0 0 41 41"
@@ -29,7 +30,14 @@ export const Brand: FC = () => {
 };
 
 export const ChevronIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) => (
-  <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-label="Chevron arrow icon"
+    width="10"
+    height="5"
+    viewBox="0 0 10 5"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       fillRule="evenodd"
       clipRule="evenodd"
@@ -40,7 +48,14 @@ export const ChevronIcon: FC<IconTypes> = ({ color = theme.color.text.secondary 
 );
 
 export const ShowIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) => (
-  <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-label="Eye shown icon"
+    width="25"
+    height="15"
+    viewBox="0 0 25 15"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M15.1096 7.3271C15.9543 7.3271 16.639 6.62241 16.639 5.75315C16.639 4.88388 15.9543 4.1792 15.1096 4.1792C14.2649 4.1792 13.5802 4.88388 13.5802 5.75315C13.5802 6.62241 14.2649 7.3271 15.1096 7.3271Z"
       fill="white"
@@ -53,7 +68,14 @@ export const ShowIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) 
 );
 
 export const HideIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) => (
-  <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-label="Eye hidden icon"
+    width="22"
+    height="16"
+    viewBox="0 0 22 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <g clip-path="url(#clip0_120_288)">
       <path
         d="M5.27949 12.7255C3.43354 11.889 1.88728 10.5085 0.847839 8.76869H0.853492C2.58319 5.69931 6.3648 3.57393 10.7512 3.57393C11.8278 3.5723 12.9004 3.7033 13.945 3.96396"
@@ -94,7 +116,14 @@ export const HideIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) 
 );
 
 export const LoadingIcon: FC<IconTypes> = ({ color = theme.color.white }) => (
-  <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-label="Loading icon"
+    width="17"
+    height="14"
+    viewBox="0 0 17 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M6.875 11.875C4.18562 11.875 2 9.68938 2 7C2 4.31063 4.18562 2.125 6.875 2.125C9.56437 2.125 11.75 4.31063 11.75 7L8.5 7L12.5625 11.0625L16.625 7L13.375 7C13.375 3.40875 10.4662 0.5 6.875 0.5C3.28375 0.5 0.375 3.40875 0.375 7C0.375 10.5912 3.28375 13.5 6.875 13.5L6.875 11.875Z"
       fill={color}
@@ -103,7 +132,14 @@ export const LoadingIcon: FC<IconTypes> = ({ color = theme.color.white }) => (
 );
 
 export const WarningIcon: FC<IconTypes> = ({ color = theme.color.error }) => (
-  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    aria-label="Warning icon"
+    width="16"
+    height="14"
+    viewBox="0 0 16 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       fill-rule="evenodd"
       clip-rule="evenodd"

@@ -29,11 +29,12 @@ export const theme = {
       main: '#FFB1B8',
     },
     text: {
-      primary: '#3B3B3B',
+      primary: '#555555',
       secondary: '#939393',
     },
     error: '#D52F1A',
     active: '#649FD6',
+    black: '#3B3B3B',
     white: '#FFFFFF',
     grey: '#696969',
     background: {
@@ -66,7 +67,7 @@ export const theme = {
       title: {
         1: {
           desk: '1.95rem', // 31.2px
-          mob: '1.8px', // 28.8px
+          mob: '1.8rem', // 28.8px
         },
       },
       body: {
@@ -105,6 +106,7 @@ export const theme = {
       small: '6px',
       main: '7px',
       large: '40px',
+      full: '50px',
     },
   },
   breakpoints: {

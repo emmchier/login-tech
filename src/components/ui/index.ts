@@ -4,3 +4,6 @@ export * from './section';
 export * from './grid';
 export * from './svg';
 export * from './heading';
+export * from './text';
+export * from './button';
+export * from './animation';

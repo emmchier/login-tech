@@ -13,9 +13,9 @@ type TextProps = {
 export const Text: FCC<TextProps> = ({
   children,
   variant = 'b1',
-  weight = 'bold',
+  weight = 'regular',
   color = 'primary',
-  cap = 'cap',
+  cap = 'none',
 }) => {
   return (
     <TextContent variant={variant} weight={weight} color={color} cap={cap}>

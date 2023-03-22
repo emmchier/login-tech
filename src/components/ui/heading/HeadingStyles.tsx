@@ -74,7 +74,6 @@ export const HeadingContent = styled.div<HeadingProps>`
   h4,
   h5,
   h6 {
-    font-style: normal;
     padding: 0;
     margin: 0;
     ${({ theme, variant }) => variantStyles(theme, variant)};
