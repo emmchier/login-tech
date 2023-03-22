@@ -76,7 +76,7 @@ export const HideIcon: FC<IconTypes> = ({ color = theme.color.text.secondary }) 
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_120_288)">
+    <g clipPath="url(#clip0_120_288)">
       <path
         d="M5.27949 12.7255C3.43354 11.889 1.88728 10.5085 0.847839 8.76869H0.853492C2.58319 5.69931 6.3648 3.57393 10.7512 3.57393C11.8278 3.5723 12.9004 3.7033 13.945 3.96396"
         stroke={color}

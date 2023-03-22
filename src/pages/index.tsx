@@ -1,8 +1,7 @@
 import { NextPage } from 'next';
 import Image from 'next/legacy/image';
 
-import { Heading, Page, Section, Text, Button } from '../components';
-import { Input } from '../components/ui/input/Input';
+import { Heading, Page, Section, Text, Button, PasswordInput, InputField } from '../components';
 import { LoadingIcon } from '../components/ui/svg/Svg';
 import { theme } from '../styles/theme';
 
@@ -65,13 +64,21 @@ const LoginPage: NextPage = () => {
             priority
           />
         </div> */}
-        <Input
+        <InputField
           type="text"
           name="user"
           label="Usuario"
-          onChange={() => {}}
-          onBlur={() => {}}
-          isOptional
+          isError={false}
+          isSupportingText={false}
+          required
+        />
+
+        <PasswordInput
+          name="pass"
+          label="Password"
+          isError={false}
+          isSupportingText={false}
+          required
         />
       </Section>
     </Page>
