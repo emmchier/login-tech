@@ -5,8 +5,7 @@ import { FCC } from '../../../types';
 import { useRouter } from 'next/router';
 
 import { PageTypes } from '../../../interfaces';
-
-import { PageContent } from './PageStyles';
+import { Animation } from '../animation';
 
 const origin = typeof window === 'undefined' ? '' : window.location.origin;
 
@@ -14,7 +13,7 @@ export const Page: FCC<PageTypes> = ({ children, title, description, keywords })
   const { asPath } = useRouter();
 
   return (
-    <PageContent>
+    <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +35,7 @@ export const Page: FCC<PageTypes> = ({ children, title, description, keywords })
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head>
-      {children}
-    </PageContent>
+      <Animation effect="fadeIn">{children}</Animation>
+    </>
   );
 };

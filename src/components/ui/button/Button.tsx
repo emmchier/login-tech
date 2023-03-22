@@ -12,7 +12,7 @@ import { ButtonContent } from './ButtonStyles';
 interface ButtonTypes {
   type?: 'submit' | 'reset' | 'button';
   size?: 'medium';
-  variant?: 'contained' | 'outlined' | 'link' | 'icon';
+  variant?: 'default' | 'outline' | 'link' | 'icon';
   fullWidth?: boolean;
   ariaLabel: string;
   disabled?: boolean;
@@ -24,7 +24,7 @@ export const Button: FCC<ButtonTypes> = ({
   children,
   type = 'button',
   size = 'medium',
-  variant = 'contained',
+  variant = 'default',
   fullWidth = false,
   disabled = false,
   isLoading = false,
@@ -32,6 +32,7 @@ export const Button: FCC<ButtonTypes> = ({
   onClick,
 }) => (
   <ButtonContent
+    role="button"
     type={type}
     size={size}
     variant={variant}

@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import Image from 'next/legacy/image';
 
 import { Heading, Page, Section, Text, Button } from '../components';
+import { Input } from '../components/ui/input/Input';
 import { LoadingIcon } from '../components/ui/svg/Svg';
 import { theme } from '../styles/theme';
 
@@ -13,7 +14,7 @@ const LoginPage: NextPage = () => {
       keywords="login, iniciar sesion, credenciales, usuario, contraseña"
     >
       <Section>
-        <Heading>Login Page</Heading>
+        {/* <Heading>Login Page</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consequuntur possimus quae
           quia dolore error, exercitationem voluptatum eos, facere fuga in molestiae laudantium
@@ -25,10 +26,10 @@ const LoginPage: NextPage = () => {
         <Button ariaLabel="ingresando..." isLoading>
           Ingresando...
         </Button>
-        <Button ariaLabel="ingresar" variant="outlined">
+        <Button ariaLabel="ingresar" variant="outline">
           Ingresar
         </Button>
-        <Button ariaLabel="ingresar" variant="outlined" disabled>
+        <Button ariaLabel="ingresar" variant="outline" disabled>
           Ingresar
         </Button>
         <Button ariaLabel="ingresar" variant="link">
@@ -51,7 +52,7 @@ const LoginPage: NextPage = () => {
         </Button>
         <Button ariaLabel="ingresar" disabled>
           Ingresar
-        </Button>
+        </Button> */}
 
         {/* <div style={{ width: '100%', height: '100%', position: 'relative' }}>
           <Image
@@ -64,6 +65,14 @@ const LoginPage: NextPage = () => {
             priority
           />
         </div> */}
+        <Input
+          type="text"
+          name="user"
+          label="Usuario"
+          onChange={() => {}}
+          onBlur={() => {}}
+          isOptional
+        />
       </Section>
     </Page>
   );

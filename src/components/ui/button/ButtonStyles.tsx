@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface ButtonProps {
   size: 'medium';
-  variant: 'contained' | 'outlined' | 'link' | 'icon';
+  variant: 'default' | 'outline' | 'link' | 'icon';
   fullWidth: boolean;
   isLoading: boolean;
 }
@@ -17,7 +17,7 @@ const sizeStyles = (size: string) =>
 
 const variantStyles = (variant: string) =>
   ({
-    contained: css`
+    default: css`
       color: ${({ theme }) => theme.color.white};
       background-color: ${({ theme }) => theme.color.primary.main};
       border: 1px solid ${({ theme }) => theme.color.primary.main};
@@ -52,7 +52,7 @@ const variantStyles = (variant: string) =>
         }
       }
     `,
-    outlined: css`
+    outline: css`
       color: ${({ theme }) => theme.color.primary.main};
       background: transparent;
       border: 1px solid ${({ theme }) => theme.color.primary.main};
@@ -167,10 +167,6 @@ export const ButtonContent = styled.button<ButtonProps>`
   &:active,
   &:focus {
     transition: 0.2s ease-in-out;
-
-    /* svg {
-      filter: brightness(0) invert(1);
-    } */
   }
 
   &:disabled {

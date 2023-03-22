@@ -11,21 +11,30 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${({ theme }) => theme.font.size.body[1].desk};
     line-height: ${({ theme }) => theme.font.lineHeight.body[1].desk};
   }
+  
   * {
     text-decoration: none;
     list-style: none;
   }
+
   ul {
     padding: 0;
   }
+
   p {
     color: ${({ theme }) => theme.color.text.primary};
   }
+
   a {
     list-style: none;
     text-decoration: none;
     color: ${({ theme }) => theme.color.text.primary};
   }
+
+  input {
+    box-sizing: border-box;
+  }
+
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     ::-webkit-scrollbar {
       display: none;

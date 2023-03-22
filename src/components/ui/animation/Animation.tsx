@@ -3,7 +3,7 @@ import { FCC } from '../../../types';
 import { AnimationContent } from './AnimationStyles';
 
 interface AnimationProps {
-  effect?: 'spinner' | 'none';
+  effect?: 'fadeIn' | 'spinner' | 'none';
 }
 
 export const Animation: FCC<AnimationProps> = ({ children, effect = 'none' }) => (
