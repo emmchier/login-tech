@@ -1,7 +1,16 @@
 import { NextPage } from 'next';
 import Image from 'next/legacy/image';
 
-import { Heading, Page, Section, Text, Button, PasswordInput, InputField } from '../components';
+import {
+  Heading,
+  Page,
+  Section,
+  Text,
+  Button,
+  PasswordInput,
+  InputField,
+  SelectField,
+} from '../components';
 import { LoadingIcon } from '../components/ui/svg/Svg';
 import { theme } from '../styles/theme';
 
@@ -12,7 +21,7 @@ const LoginPage: NextPage = () => {
       description="Ingresa en tu cuenta con tu usuario y contraseña."
       keywords="login, iniciar sesion, credenciales, usuario, contraseña"
     >
-      <Section>
+      <Section auto={false}>
         {/* <Heading>Login Page</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consequuntur possimus quae
@@ -80,6 +89,7 @@ const LoginPage: NextPage = () => {
           isSupportingText={false}
           required
         />
+        <SelectField name="select" label="Tipo de documento" isSupportingText={false} required />
       </Section>
     </Page>
   );

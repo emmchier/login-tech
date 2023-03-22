@@ -22,7 +22,6 @@ export const PasswordInput: FC<InputTypes> = ({
 }) => {
   const [typeInput, setTypeInput] = useState<InputPasswordTypes>('password');
   const [showPassword, setShowPassword] = useState(false);
-  console.log(typeInput);
 
   const handleClick = () => setShowPassword(!showPassword);
 

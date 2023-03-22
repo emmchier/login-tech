@@ -21,6 +21,10 @@ export const InputContent = styled.div`
     font-size: ${({ theme }) => theme.font.size.body[1].desk};
     line-height: ${({ theme }) => theme.font.lineHeight.body[1].desk};
   }
+
+  .filter {
+    display: none;
+  }
 `;
 
 export const Label = styled.label`
