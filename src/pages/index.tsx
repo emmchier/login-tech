@@ -12,6 +12,7 @@ import {
   SelectField,
 } from '../components';
 import { LoadingIcon } from '../components/ui/svg/Svg';
+import { Toast } from '../components/ui/toast/Toast';
 import { theme } from '../styles/theme';
 
 const LoginPage: NextPage = () => {
@@ -22,6 +23,7 @@ const LoginPage: NextPage = () => {
       keywords="login, iniciar sesion, credenciales, usuario, contraseña"
     >
       <Section auto={false}>
+        {/* <Toast /> */}
         {/* <Heading>Login Page</Heading>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consequuntur possimus quae
@@ -73,7 +75,7 @@ const LoginPage: NextPage = () => {
             priority
           />
         </div> */}
-        <InputField
+        {/* <InputField
           type="text"
           name="user"
           label="Usuario"
@@ -89,7 +91,7 @@ const LoginPage: NextPage = () => {
           isSupportingText={false}
           required
         />
-        <SelectField name="select" label="Tipo de documento" isSupportingText={false} required />
+        <SelectField name="select" label="Tipo de documento" isSupportingText={false} required /> */}
       </Section>
     </Page>
   );
