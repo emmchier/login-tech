@@ -22,6 +22,7 @@ export const LoginActions = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: ${({ theme }) => theme.spacing(4)};
 
   button:nth-child(2) {
     color: ${({ theme }) => theme.color.primary.main};
@@ -34,10 +35,10 @@ export const LoginActions = styled.div`
 `;
 
 export const Alerts = styled.div`
-  margin: ${({ theme }) => theme.spacing(6)} 0;
+  margin-bottom: ${({ theme }) => theme.spacing(6)};
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    margin: ${({ theme }) => theme.spacing(6)} 0;
+    margin-bottom: ${({ theme }) => theme.spacing(6)};
   }
 `;
 
@@ -45,6 +46,8 @@ export const RecoverActions = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(20)};
 
   button:nth-child(1) {
     margin-right: ${({ theme }) => theme.spacing(1.25)};

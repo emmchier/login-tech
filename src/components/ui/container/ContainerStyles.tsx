@@ -7,14 +7,14 @@ interface ContainerProps {
 const styledSizes = (size: string) =>
   ({
     sm: css`
-      margin: 0 ${({ theme }) => theme.spacing(20)};
+      margin: 0 ${({ theme }) => theme.spacing(40)};
 
       @media only screen and (${({ theme }) => theme.breakpoints.tabletLandscape}) {
         margin: 0 ${({ theme }) => theme.spacing(20)};
       }
 
       @media only screen and (${({ theme }) => theme.breakpoints.tablet}) {
-        margin: 0 ${({ theme }) => theme.spacing(60)};
+        margin: 0 ${({ theme }) => theme.spacing(40)};
       }
 
       @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {

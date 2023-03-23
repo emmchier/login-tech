@@ -7,6 +7,10 @@ export const TemplateContent = styled.div`
   padding-left: ${({ theme }) => theme.spacing(40)};
   position: relative;
 
+  h2 {
+    margin-bottom: ${({ theme }) => theme.spacing(8)};
+  }
+
   @media only screen and (${({ theme }) => theme.breakpoints.tablet}) {
     padding-left: ${({ theme }) => theme.spacing(15)};
   }
@@ -76,7 +80,7 @@ export const BannerContainer = styled.div`
 export const BannerImage = styled.div`
   background: transparent;
   position: relative;
-  z-index: 999;
+  z-index: 1;
 
   @media only screen and (${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 ${({ theme }) => theme.spacing(10)};

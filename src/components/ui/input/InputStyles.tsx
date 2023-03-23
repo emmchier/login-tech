@@ -15,7 +15,7 @@ export const InputContent = styled.div`
   justify-content: start;
   flex-direction: column;
   width: 100%;
-  margin-bottom: ${({ theme }) => theme.spacing(4)};
+  margin-bottom: ${({ theme }) => theme.spacing(2.5)};
 
   label,
   input {
@@ -30,6 +30,7 @@ export const InputContent = styled.div`
 
 export const Label = styled.label`
   font-weight: ${({ theme }) => theme.font.weight.medium};
+  margin-bottom: ${({ theme }) => theme.spacing(1)};
   span {
     font-family: ${({ theme }) => theme.font.family.encodeSans};
     font-weight: ${({ theme }) => theme.font.weight.semiBold};
@@ -73,6 +74,7 @@ export const SupportingTextContent = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: ${({ theme }) => theme.spacing(2)};
 
   p {
     font-family: ${({ theme }) => theme.font.family.encodeSans};

@@ -13,15 +13,18 @@ export const BrandContent = styled.div`
     margin-right: ${({ theme }) => theme.spacing(1)};
   }
 
-  h2 {
+  h1 {
     font-family: ${({ theme }) => theme.font.family.rubik};
+    font-weight: ${({ theme }) => theme.font.weight.light};
 
     span {
-      font-weight: ${({ theme }) => theme.font.weight.light};
+      font-weight: ${({ theme }) => theme.font.weight.bold};
     }
   }
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    margin-top: ${({ theme }) => theme.spacing(4)};
+    margin-bottom: ${({ theme }) => theme.spacing(0)};
     position: relative;
   }
 `;

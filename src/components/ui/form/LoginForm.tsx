@@ -37,15 +37,15 @@ export const LoginForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Alerts>
-        {showToast === true && (
+      {showToast === true && (
+        <Alerts>
           <Toast
             type="error"
             message="El nombre de usuario o la contraseña son incorrectos"
             fullWidth
           />
-        )}
-      </Alerts>
+        </Alerts>
+      )}
       <InputGroup>
         <InputField
           type="text"

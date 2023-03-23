@@ -9,10 +9,11 @@ export const SelectContent = styled.div`
   justify-content: start;
   flex-direction: column;
   width: 100%;
+  margin-bottom: ${({ theme }) => theme.spacing(2.5)};
 
-  select {
+  /* select {
     margin: ${({ theme }) => theme.spacing(1)} 0 ${({ theme }) => theme.spacing(2)} 0;
-  }
+  } */
 `;
 
 export const SelectContainer = styled.div`
