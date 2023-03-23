@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { Text } from '../text';
-import { Overlay } from './LoadingScreenStyles';
+
+import { AnimationContainer, Overlay } from './LoadingScreenStyles';
 
 interface LoadingScreenProps {
   isLoading?: boolean;
@@ -11,7 +11,11 @@ export const LoadingScreen: FC<LoadingScreenProps> = ({ isLoading = false }) => 
     <>
       {isLoading === true && (
         <Overlay>
-          <Text>Loading...</Text>
+          <AnimationContainer>
+            <div></div>
+            <div></div>
+            <div></div>
+          </AnimationContainer>
         </Overlay>
       )}
     </>
