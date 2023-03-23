@@ -69,7 +69,7 @@ export const BannerContainer = styled.div`
   justify-content: center;
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    height: auto;
+    height: 30vh;
     padding: 0 ${({ theme }) => theme.spacing(6)};
     span {
       height: auto !important;

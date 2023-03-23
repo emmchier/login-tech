@@ -14,8 +14,9 @@ interface SelectTypes {
   isSupportingText?: boolean;
   supportingType?: 'error';
   supportingText?: string;
-  required?: boolean;
   disabled?: boolean;
+  required?: boolean;
+  isRequiredLabel?: boolean;
   defaultValue?: any;
   onChange?: (e: any) => void;
   getOptionValue?: (e: any) => any;
@@ -30,8 +31,9 @@ export const SelectField: FC<SelectTypes> = ({
   isSupportingText = false,
   supportingType = 'error',
   supportingText = '',
-  required = false,
   disabled = false,
+  required = false,
+  isRequiredLabel = false,
   defaultValue,
   getOptionValue,
   onChange,
@@ -41,7 +43,7 @@ export const SelectField: FC<SelectTypes> = ({
     <SelectContent>
       <Label htmlFor={name}>
         {label}
-        {required === true && <span> *</span>}
+        {isRequiredLabel === true && <span> *</span>}
       </Label>
       <SelectContainer>
         <Select
@@ -63,6 +65,7 @@ export const SelectField: FC<SelectTypes> = ({
           }}
           onChange={onChange}
           onBlur={onBlur}
+          required={required}
         />
       </SelectContainer>
       {isSupportingText === true && (

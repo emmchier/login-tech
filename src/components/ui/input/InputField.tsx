@@ -14,6 +14,7 @@ export interface InputTypes {
   supportingType?: 'error';
   supportingText?: string;
   isError?: boolean;
+  isRequiredLabel?: boolean;
   required?: boolean;
   disabled?: boolean;
   action?: ReactNode;
@@ -31,6 +32,7 @@ export const InputField: FC<InputTypes> = ({
   supportingType = 'error',
   supportingText = '',
   isError = false,
+  isRequiredLabel = false,
   required = false,
   disabled = false,
   action = '',
@@ -47,7 +49,7 @@ export const InputField: FC<InputTypes> = ({
     <InputContent>
       <Label htmlFor={name}>
         {label}
-        {required === true && <span> *</span>}
+        {isRequiredLabel === true && <span> *</span>}
       </Label>
       <Field action={isAction}>
         <Input

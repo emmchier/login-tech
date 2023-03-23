@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import styled, { css } from 'styled-components';
 
 interface InputFieldProps {
@@ -25,6 +24,10 @@ export const InputContent = styled.div`
 
   .filter {
     display: none;
+  }
+
+  input[type='password'] {
+    color: ${({ theme }) => theme.color.text.secondary};
   }
 `;
 

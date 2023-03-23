@@ -32,6 +32,7 @@ export const LoginForm = () => {
     setTimeout(() => {
       hideLoading();
       setShowToast(true);
+      console.log(`Usuario: ${user}, Contraseña: ${password}`);
     }, 2000);
   };
 
@@ -54,6 +55,7 @@ export const LoginForm = () => {
           value={user}
           label="Usuario"
           placeholder="Ingresá tu usuario"
+          isRequiredLabel={true}
           required
         />
         <PasswordInput
@@ -62,6 +64,7 @@ export const LoginForm = () => {
           onChange={handleChange}
           value={password}
           placeholder="Ingresá tu contraseña"
+          isRequiredLabel={true}
           required
         />
       </InputGroup>

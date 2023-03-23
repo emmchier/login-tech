@@ -35,6 +35,7 @@ export const RecoverPasswordForm = () => {
     setTimeout(() => {
       setLoading(false);
       setValues(initialState);
+      console.log(`Tipo de documento: ${docType}, Número de documento: ${docValue}`);
     }, 3000);
   };
 
@@ -52,11 +53,11 @@ export const RecoverPasswordForm = () => {
           name="docType"
           options={options}
           defaultValue={options[0].value}
-          //   onChange={handleChange}
+          onChange={(option) => setValues({ ...values, docType: option.value })}
           value={docType}
           label="Tipo de documento"
           placeholder="DNI"
-          required
+          isRequiredLabel={true}
         />
         <InputField
           type="number"
@@ -67,7 +68,7 @@ export const RecoverPasswordForm = () => {
           isError={handleError}
           isSupportingText={handleError}
           supportingText="Este campo no debe estar vacío"
-          //   required
+          isRequiredLabel={true}
         />
       </InputGroup>
       <RecoverActions>
