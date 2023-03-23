@@ -8,14 +8,12 @@ import { ToastContent } from './ToastStyles';
 interface ToastTypes {
   type: 'error';
   message: string;
+  fullWidth?: boolean;
 }
 
-export const Toast: FC<ToastTypes> = ({
-  type = 'error',
-  message = 'El nombre de usuario o la contraseña son incorrectos',
-}) => {
+export const Toast: FC<ToastTypes> = ({ type = 'error', message = '', fullWidth = false }) => {
   return (
-    <ToastContent type={type}>
+    <ToastContent type={type} fullWidth={fullWidth}>
       {getIconByType(type)}
       <Text>{message}</Text>
     </ToastContent>

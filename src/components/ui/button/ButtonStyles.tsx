@@ -91,6 +91,7 @@ const variantStyles = (variant: string) =>
       border: none;
       padding: none;
       text-decoration: underline;
+      text-underline-position: under;
 
       &:hover {
         opacity: 0.8;

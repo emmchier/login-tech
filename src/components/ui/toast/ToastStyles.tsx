@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 interface ToastProps {
   type: 'error';
+  fullWidth: boolean;
 }
 
 const typeStyles = (type: string) =>
@@ -13,12 +14,20 @@ const typeStyles = (type: string) =>
   }[type]);
 
 export const ToastContent = styled.div<ToastProps>`
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 360px;
   padding: ${({ theme }) => theme.spacing(4)};
   border-radius: ${({ theme }) => theme.border.radius.main};
+  ${({ fullWidth }) =>
+    fullWidth === true
+      ? css`
+          width: 100%;
+        `
+      : css`
+          width: 360px;
+        `}
   ${({ type }) => typeStyles(type)};
 
   svg {

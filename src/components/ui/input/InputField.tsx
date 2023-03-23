@@ -17,6 +17,7 @@ export interface InputTypes {
   required?: boolean;
   disabled?: boolean;
   action?: ReactNode;
+  max?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
@@ -26,14 +27,15 @@ export const InputField: FC<InputTypes> = ({
   name,
   value,
   label,
-  placeholder = 'Ingrese un texto',
+  placeholder = '',
   isSupportingText = false,
   supportingType = 'error',
-  supportingText = 'Este campo no debe estar vacío',
+  supportingText = '',
   isError = false,
   required = false,
   disabled = false,
   action = '',
+  max = '',
   onChange,
   onBlur,
 }) => {

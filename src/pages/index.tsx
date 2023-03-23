@@ -11,6 +11,8 @@ import {
   InputField,
   SelectField,
 } from '../components';
+import { LoginForm } from '../components/ui/form/LoginForm';
+import { RecoverPasswordForm } from '../components/ui/form/RecoverPasswordForm';
 import { LoadingIcon } from '../components/ui/svg/Svg';
 import { Toast } from '../components/ui/toast/Toast';
 import { theme } from '../styles/theme';
@@ -23,6 +25,7 @@ const LoginPage: NextPage = () => {
       keywords="login, iniciar sesion, credenciales, usuario, contraseña"
     >
       <Section auto={false}>
+        <LoginForm />
         {/* <Toast /> */}
         {/* <Heading>Login Page</Heading>
         <Text>

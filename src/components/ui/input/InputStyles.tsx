@@ -15,6 +15,7 @@ export const InputContent = styled.div`
   justify-content: start;
   flex-direction: column;
   width: 100%;
+  margin-bottom: ${({ theme }) => theme.spacing(4)};
 
   label,
   input {

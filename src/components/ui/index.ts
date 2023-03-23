@@ -10,3 +10,5 @@ export * from './animation';
 export * from './input';
 export * from './select';
 export * from './toast';
+export * from './loading';
+export * from './form';

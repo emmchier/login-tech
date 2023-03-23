@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 
 import { Page, Section } from '../components';
+import { RecoverPasswordForm } from '../components/ui/form/RecoverPasswordForm';
 
 const RecoverPasswordPage: NextPage = () => {
   return (
@@ -9,8 +10,8 @@ const RecoverPasswordPage: NextPage = () => {
       description="Aquí podrás recuparar tu contraseña."
       keywords="contraseña, password, credenciales"
     >
-      <Section>
-        <h2>Recuperar contraseña</h2>
+      <Section auto={false}>
+        <RecoverPasswordForm />
       </Section>
     </Page>
   );
