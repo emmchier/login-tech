@@ -12,3 +12,6 @@ export * from './select';
 export * from './toast';
 export * from './loading';
 export * from './form';
+export * from './template';
+export * from './brand';
+export * from './img';

@@ -17,7 +17,7 @@ export const Heading: FCC<HeadingProps> = ({
   element = 'h2',
   weight = 'bold',
   color = 'primary',
-  cap = 'cap',
+  cap = 'none',
 }) => {
   const setHeading = () => {
     switch (element) {

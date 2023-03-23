@@ -13,7 +13,7 @@ interface SectionTypes {
 export const Section: FCC<SectionTypes> = ({
   children,
   auto = true,
-  container = 'md',
+  container = 'none',
   padding = '0',
 }) => {
   return (

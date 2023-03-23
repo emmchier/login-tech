@@ -74,7 +74,7 @@ const gapStyles = (gap: Spacing) =>
     `,
   }[gap]);
 
-export const GridList = styled.ul<GridListProps>`
+export const GridList = styled.div<GridListProps>`
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -85,6 +85,7 @@ export const GridList = styled.ul<GridListProps>`
   margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) / -2);
   margin-left: calc(var(--bs-gutter-x) / -2);
+  margin-bottom: 0;
   ${({ gap }) => gapStyles(gap)};
 
   & > * {

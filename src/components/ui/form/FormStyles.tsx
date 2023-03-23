@@ -1,12 +1,20 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  width: 50%;
+  width: 100%;
 `;
 
 export const InputGroup = styled.div`
-  margin-top: ${({ theme }) => theme.spacing(4)};
-  margin-bottom: ${({ theme }) => theme.spacing(8)};
+  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    margin-bottom: ${({ theme }) => theme.spacing(6)};
+
+    input {
+      margin-bottom: 0;
+    }
+    button {
+      transform: translateY(1px) !important;
+    }
+  }
 `;
 
 export const LoginActions = styled.div`
@@ -17,7 +25,19 @@ export const LoginActions = styled.div`
 
   button:nth-child(2) {
     color: ${({ theme }) => theme.color.primary.main};
-    margin-top: ${({ theme }) => theme.spacing(14)};
+    margin-top: ${({ theme }) => theme.spacing(10)};
+
+    @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+      margin-top: ${({ theme }) => theme.spacing(4)};
+    }
+  }
+`;
+
+export const Alerts = styled.div`
+  margin: ${({ theme }) => theme.spacing(6)} 0;
+
+  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    margin: ${({ theme }) => theme.spacing(6)} 0;
   }
 `;
 

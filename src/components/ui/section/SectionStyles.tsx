@@ -7,7 +7,7 @@ interface SectionContentTypes {
 }
 
 const SectionContent = styled.section<SectionContentTypes>`
-  height: ${({ auto }) => (auto ? 'auto' : '100vh')};
+  height: ${({ auto }) => (auto === true ? 'auto' : '100vh')};
   width: 100%;
   ${({ padding }) => `padding${padding}` || `:0`};
   margin: 0;

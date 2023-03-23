@@ -8,6 +8,7 @@ export interface ColTypes {
   md: Column;
   lg: Column;
   xlg: Column;
+  smOrder?: number;
 }
 
 const getBreackpoint = (bpt: Column) => {
@@ -41,7 +42,7 @@ const getBreackpoint = (bpt: Column) => {
   }
 };
 
-export const GridCol = styled.li<ColTypes>`
+export const GridCol = styled.div<ColTypes>`
   display: flex;
   list-style: none;
   flex-grow: 0;
@@ -55,6 +56,7 @@ export const GridCol = styled.li<ColTypes>`
   }
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     flex-basis: ${({ sm }) => getBreackpoint(sm)};
+    order: ${({ smOrder }) => smOrder};
   }
   @media only screen and (${({ theme }) => theme.breakpoints.smallMobile}) {
     flex-basis: ${({ xs }) => getBreackpoint(xs)};

@@ -105,7 +105,10 @@ export const theme = {
     radius: {
       small: '6px',
       main: '7px',
-      large: '40px',
+      large: {
+        desk: '108px',
+        mob: '40px',
+      },
       full: '50px',
     },
   },

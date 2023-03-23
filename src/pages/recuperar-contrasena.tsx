@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 
-import { Page, Section } from '../components';
-import { RecoverPasswordForm } from '../components/ui/form/RecoverPasswordForm';
+import { Page, Section, TemplateScreen, RecoverPasswordForm } from '../components';
 
 const RecoverPasswordPage: NextPage = () => {
   return (
@@ -11,7 +10,9 @@ const RecoverPasswordPage: NextPage = () => {
       keywords="contraseña, password, credenciales"
     >
       <Section auto={false}>
-        <RecoverPasswordForm />
+        <TemplateScreen title="Olvidé mi contraseña">
+          <RecoverPasswordForm />
+        </TemplateScreen>
       </Section>
     </Page>
   );

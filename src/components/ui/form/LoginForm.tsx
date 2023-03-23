@@ -4,7 +4,7 @@ import React, { ChangeEvent, SyntheticEvent, useContext, useState } from 'react'
 import { Button, InputField, PasswordInput, Toast } from '../../../components';
 import { UIContext } from '../../../context/UIContext';
 
-import { LoginActions, Form, InputGroup } from './FormStyles';
+import { LoginActions, Form, InputGroup, Alerts } from './FormStyles';
 
 export const LoginForm = () => {
   const { push } = useRouter();
@@ -37,13 +37,15 @@ export const LoginForm = () => {
 
   return (
     <Form onSubmit={handleSubmit}>
-      {showToast === true && (
-        <Toast
-          type="error"
-          message="El nombre de usuario o la contraseña son incorrectos"
-          fullWidth
-        />
-      )}
+      <Alerts>
+        {showToast === true && (
+          <Toast
+            type="error"
+            message="El nombre de usuario o la contraseña son incorrectos"
+            fullWidth
+          />
+        )}
+      </Alerts>
       <InputGroup>
         <InputField
           type="text"
