@@ -17,7 +17,6 @@ export interface InputTypes {
   required?: boolean;
   disabled?: boolean;
   action?: ReactNode;
-  max?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
@@ -35,7 +34,6 @@ export const InputField: FC<InputTypes> = ({
   required = false,
   disabled = false,
   action = '',
-  max = '',
   onChange,
   onBlur,
 }) => {

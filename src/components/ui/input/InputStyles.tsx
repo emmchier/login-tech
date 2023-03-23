@@ -30,7 +30,7 @@ export const InputContent = styled.div`
 
 export const Label = styled.label`
   font-weight: ${({ theme }) => theme.font.weight.medium};
-  margin-bottom: ${({ theme }) => theme.spacing(1)};
+
   span {
     font-family: ${({ theme }) => theme.font.family.encodeSans};
     font-weight: ${({ theme }) => theme.font.weight.semiBold};
