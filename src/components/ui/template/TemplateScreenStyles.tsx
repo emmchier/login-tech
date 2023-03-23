@@ -97,7 +97,8 @@ export const Background = styled.div`
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     width: 100%;
-    transform: translateY(90px);
+    height: 65%;
+    bottom: 0;
     border-radius: ${({ theme }) => theme.border.radius.large.mob}
       ${({ theme }) => theme.border.radius.large.mob} 0 0;
   }
