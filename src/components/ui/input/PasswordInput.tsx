@@ -52,7 +52,7 @@ export const PasswordInput: FC<InputTypes> = ({
         disabled={disabled}
         onChange={onChange}
         onBlur={onBlur}
-        action={
+        actionField={
           <Button
             onClick={handleClick}
             ariaLabel={showPassword === false ? 'password hidden' : 'password shown'}

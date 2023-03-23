@@ -1,5 +1,6 @@
 import React from 'react';
 import { FCC } from '../../../types';
+
 import { AnimationContent } from './AnimationStyles';
 
 interface AnimationProps {

@@ -1,7 +1,8 @@
 import React, { FC, ChangeEvent, ReactNode, useState, useEffect } from 'react';
 
-import { InputContent, Label, Input, Field } from './InputStyles';
 import { SupportingText } from './SupportingText';
+
+import { InputContent, Label, Input, Field } from './InputStyles';
 
 export interface InputTypes {
   type?: 'text' | 'number' | 'email' | 'password' | 'checkbox' | 'radio';
@@ -17,7 +18,7 @@ export interface InputTypes {
   isRequiredLabel?: boolean;
   required?: boolean;
   disabled?: boolean;
-  action?: ReactNode;
+  actionField?: ReactNode;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
@@ -35,15 +36,15 @@ export const InputField: FC<InputTypes> = ({
   isRequiredLabel = false,
   required = false,
   disabled = false,
-  action = '',
+  actionField = '',
   onChange,
   onBlur,
 }) => {
   const [isAction, setIsAction] = useState(false);
 
   useEffect(() => {
-    action !== '' ? setIsAction(true) : setIsAction(false);
-  }, [action]);
+    actionField !== '' ? setIsAction(true) : setIsAction(false);
+  }, [actionField]);
 
   return (
     <InputContent>
@@ -51,7 +52,7 @@ export const InputField: FC<InputTypes> = ({
         {label}
         {isRequiredLabel === true && <span> *</span>}
       </Label>
-      <Field action={isAction}>
+      <Field isAction={isAction}>
         <Input
           type={type}
           id={name}
@@ -65,7 +66,7 @@ export const InputField: FC<InputTypes> = ({
           isError={isError}
           autoComplete="off"
         />
-        {action}
+        {actionField}
       </Field>
       {isSupportingText === true && (
         <SupportingText type={supportingType} message={supportingText} />

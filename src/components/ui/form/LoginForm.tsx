@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
 import React, { ChangeEvent, SyntheticEvent, useContext, useState } from 'react';
+import { useRouter } from 'next/router';
+import { UIContext } from '../../../context/UIContext';
 
 import { Button, InputField, PasswordInput, Toast } from '../../../components';
-import { UIContext } from '../../../context/UIContext';
 
 import { LoginActions, Form, InputGroup, Alerts } from './FormStyles';
 

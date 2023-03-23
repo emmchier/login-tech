@@ -11,11 +11,9 @@ interface ToastTypes {
   fullWidth?: boolean;
 }
 
-export const Toast: FC<ToastTypes> = ({ type = 'error', message = '', fullWidth = false }) => {
-  return (
-    <ToastContent type={type} fullWidth={fullWidth}>
-      {getIconByType(type)}
-      <Text>{message}</Text>
-    </ToastContent>
-  );
-};
+export const Toast: FC<ToastTypes> = ({ type = 'error', message = '', fullWidth = false }) => (
+  <ToastContent type={type} fullWidth={fullWidth}>
+    {getIconByType(type)}
+    <Text>{message}</Text>
+  </ToastContent>
+);

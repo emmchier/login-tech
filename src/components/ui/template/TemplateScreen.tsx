@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/legacy/image';
 import { FCC } from '../../../types';
 
 import { Brand, Col, Heading, Img, Row } from '../../../components';

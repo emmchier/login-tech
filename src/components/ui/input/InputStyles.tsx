@@ -5,7 +5,7 @@ interface InputFieldProps {
 }
 
 interface FieldProps {
-  action?: boolean;
+  isAction?: boolean;
 }
 
 export const InputContent = styled.div`
@@ -97,8 +97,8 @@ export const Field = styled.div<FieldProps>`
   justify-content: flex-end;
   width: 100%;
 
-  ${({ action }) =>
-    action === true
+  ${({ isAction }) =>
+    isAction === true
       ? css`
           input {
             padding: 0 ${({ theme }) => theme.spacing(8)} 0 ${({ theme }) => theme.spacing(3)};

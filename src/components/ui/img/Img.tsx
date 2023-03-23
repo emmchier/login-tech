@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-
 import Image from 'next/legacy/image';
+
 import { ImgContent } from './ImgStyles';
 
 interface ImgProps {

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { IconTypes } from '../../../interfaces';
 import { theme } from '../../../styles/theme';
 

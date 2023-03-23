@@ -1,8 +1,10 @@
-import React, { FC, ChangeEvent, ReactNode, useState, useEffect, useId } from 'react';
+import React, { FC, useId } from 'react';
+
 import Select from 'react-select';
-import { Button } from '../button';
+
+import { Button, ChevronIcon } from '../../../components';
 import { Label, SupportingText } from '../input';
-import { ChevronIcon } from '../svg';
+
 import { SelectContainer, SelectContent, selectStyles } from './SelectStyles';
 
 interface SelectTypes {

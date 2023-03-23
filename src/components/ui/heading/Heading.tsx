@@ -3,13 +3,13 @@ import { FCC } from '../../../types';
 
 import { H1, H2, H3, H4, H5, H6, HeadingContent } from './HeadingStyles';
 
-type HeadingProps = {
+interface HeadingProps {
   variant?: 't1';
   element?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   weight?: 'light' | 'regular' | 'medium' | 'semiBold' | 'bold';
   color?: 'primary' | 'secondary' | 'error';
   cap?: 'upper' | 'lower' | 'cap' | 'none';
-};
+}
 
 export const Heading: FCC<HeadingProps> = ({
   children,

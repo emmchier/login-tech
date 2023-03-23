@@ -1,7 +1,9 @@
 import React, { FC } from 'react';
 
-import { Text } from '../../../components';
 import { getIconByType } from '../../../utils';
+
+import { Text } from '../../../components';
+
 import { SupportingTextContent } from './InputStyles';
 
 interface SupportingTextTypes {

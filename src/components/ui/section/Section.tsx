@@ -2,6 +2,7 @@ import React from 'react';
 import { FCC } from '../../../types';
 
 import { Container } from '../../../components';
+
 import SectionContent from './SectionStyles';
 
 interface SectionTypes {

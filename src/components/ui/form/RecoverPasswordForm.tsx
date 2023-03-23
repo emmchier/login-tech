@@ -1,7 +1,8 @@
-import { useRouter } from 'next/router';
 import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
+import { useRouter } from 'next/router';
+import { options } from '../../../domain/option-list';
 
-import { Button, InputField, PasswordInput, SelectField } from '../../../components';
+import { Button, InputField, SelectField } from '../../../components';
 
 import { Form, InputGroup, RecoverActions } from './FormStyles';
 
@@ -38,13 +39,6 @@ export const RecoverPasswordForm = () => {
       console.log(`Tipo de documento: ${docType}, Número de documento: ${docValue}`);
     }, 3000);
   };
-
-  const options = [
-    { value: 'DNI', label: 'DNI' },
-    { value: 'LC', label: 'LC' },
-    { value: 'LE', label: 'LE' },
-    { value: 'CI', label: 'CI' },
-  ];
 
   return (
     <Form onSubmit={handleSubmit}>
