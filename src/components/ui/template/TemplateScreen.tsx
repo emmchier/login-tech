@@ -9,6 +9,7 @@ import {
   BannerImage,
   FormContainer,
   Info,
+  PanelBody,
   PanelHeader,
   TemplateContent,
 } from './TemplateScreenStyles';
@@ -23,8 +24,9 @@ export const TemplateScreen: FCC<TemplateScreenProps> = ({ children, title = '' 
       <Brand />
       <Row>
         <Col xs={12} sm={12} md={3} lg={3} xlg={3} smOrder={2}>
-          <PanelHeader />
           <FormContainer>
+            <PanelHeader />
+            <PanelBody />
             <Info>
               <Heading variant="t1">{title}</Heading>
               {children}

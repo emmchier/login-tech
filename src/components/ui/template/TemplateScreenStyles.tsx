@@ -44,14 +44,28 @@ export const Info = styled.div`
   }
 `;
 
+export const PanelBody = styled.div`
+  display: none;
+
+  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    display: block;
+    height: 50%;
+    width: 100%;
+    background: ${({ theme }) => theme.color.white};
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+`;
+
 export const PanelHeader = styled.div`
   display: none;
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     display: block;
     position: absolute;
-    z-index: 1;
-    height: 100%;
+    z-index: 2;
+    height: 50%;
     width: 100%;
     background: ${({ theme }) => theme.color.white};
     box-shadow: ${({ theme }) => theme.elevation.main.light};
