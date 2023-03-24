@@ -23,7 +23,7 @@ export const TemplateContent = styled.div`
 export const FormContainer = styled.div`
   height: auto;
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    background: ${({ theme }) => theme.color.primary.background};
+    /* background: ${({ theme }) => theme.color.primary.background}; */
   }
 `;
 
@@ -39,8 +39,13 @@ export const Info = styled.div`
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     height: auto;
     padding: ${({ theme }) => theme.spacing(6)};
+    margin-top: ${({ theme }) => theme.spacing(6)};
     position: relative;
     z-index: 2;
+    background: ${({ theme }) => theme.color.white};
+    border-radius: ${({ theme }) => theme.border.radius.large.mob}
+      ${({ theme }) => theme.border.radius.large.mob} 0 0;
+    box-shadow: ${({ theme }) => theme.elevation.main.light};
   }
 `;
 
@@ -51,24 +56,21 @@ export const PanelBody = styled.div`
     display: block;
     height: 50%;
     width: 100%;
-    background: ${({ theme }) => theme.color.white};
+    background: ${({ theme }) => theme.color.primary.background};
     position: absolute;
-    bottom: 0;
-    z-index: 1;
+    top: 0;
+    z-index: 0;
   }
 `;
 
 export const PanelHeader = styled.div`
-  display: none;
-
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     display: block;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     height: 50%;
     width: 100%;
     background: ${({ theme }) => theme.color.white};
-    box-shadow: ${({ theme }) => theme.elevation.main.light};
     border-radius: ${({ theme }) => theme.border.radius.large.mob}
       ${({ theme }) => theme.border.radius.large.mob} 0 0;
   }
@@ -88,6 +90,8 @@ export const BannerContainer = styled.div`
     span {
       height: auto !important;
     }
+    position: relative;
+    z-index: 0;
   }
 `;
 

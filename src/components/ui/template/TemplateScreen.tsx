@@ -25,12 +25,13 @@ export const TemplateScreen: FCC<TemplateScreenProps> = ({ children, title = '' 
       <Row>
         <Col xs={12} sm={12} md={4} lg={3} xlg={3} smOrder={2}>
           <FormContainer>
-            <PanelHeader />
-            <PanelBody />
-            <Info>
-              <Heading variant="t1">{title}</Heading>
-              {children}
-            </Info>
+            <PanelHeader>
+              <Info>
+                <Heading variant="t1">{title}</Heading>
+                {children}
+              </Info>
+              <PanelBody />
+            </PanelHeader>
           </FormContainer>
         </Col>
         <Col xs={12} sm={12} md={8} lg={9} xlg={9} smOrder={1}>
