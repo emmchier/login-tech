@@ -17,14 +17,15 @@ export const TemplateContent = styled.div`
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     padding: 0;
+
+    h2 {
+      margin-bottom: ${({ theme }) => theme.spacing(6)};
+    }
   }
 `;
 
 export const FormContainer = styled.div`
   height: auto;
-  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    /* background: ${({ theme }) => theme.color.primary.background}; */
-  }
 `;
 
 export const Info = styled.div`
@@ -38,41 +39,27 @@ export const Info = styled.div`
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     height: auto;
-    padding: ${({ theme }) => theme.spacing(6)};
-    margin-top: ${({ theme }) => theme.spacing(6)};
-    position: relative;
-    z-index: 2;
+    padding: 0 ${({ theme }) => theme.spacing(6)} ${({ theme }) => theme.spacing(6)};
     background: ${({ theme }) => theme.color.white};
-    border-radius: ${({ theme }) => theme.border.radius.large.mob}
-      ${({ theme }) => theme.border.radius.large.mob} 0 0;
-    box-shadow: ${({ theme }) => theme.elevation.main.light};
-  }
-`;
-
-export const PanelBody = styled.div`
-  display: none;
-
-  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    display: block;
-    height: 50%;
-    width: 100%;
-    background: ${({ theme }) => theme.color.primary.background};
-    position: absolute;
-    top: 0;
-    z-index: 0;
   }
 `;
 
 export const PanelHeader = styled.div`
+  display: none;
+
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     display: block;
     position: absolute;
+    bottom: 0;
     z-index: 3;
-    height: 50%;
+    height: 30px;
     width: 100%;
     background: ${({ theme }) => theme.color.white};
     border-radius: ${({ theme }) => theme.border.radius.large.mob}
       ${({ theme }) => theme.border.radius.large.mob} 0 0;
+    border-radius: ${({ theme }) => theme.border.radius.large.mob}
+      ${({ theme }) => theme.border.radius.large.mob} 0 0;
+    box-shadow: ${({ theme }) => theme.elevation.main.light};
   }
 `;
 
@@ -85,8 +72,7 @@ export const BannerContainer = styled.div`
   justify-content: center;
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
-    height: 30vh;
-    padding: 0 ${({ theme }) => theme.spacing(6)};
+    height: 35vh;
     span {
       height: auto !important;
     }
@@ -103,6 +89,11 @@ export const BannerImage = styled.div`
   @media only screen and (${({ theme }) => theme.breakpoints.tablet}) {
     padding: 0 ${({ theme }) => theme.spacing(10)};
   }
+
+  @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 0 ${({ theme }) => theme.spacing(15)};
+    margin-bottom: ${({ theme }) => theme.spacing(10)};
+  }
 `;
 
 export const Background = styled.div`
@@ -117,6 +108,7 @@ export const Background = styled.div`
     width: 100%;
     height: 65%;
     bottom: 0;
+    border-bottom: 1px solid ${({ theme }) => theme.color.white};
     border-radius: ${({ theme }) => theme.border.radius.large.mob}
       ${({ theme }) => theme.border.radius.large.mob} 0 0;
   }
