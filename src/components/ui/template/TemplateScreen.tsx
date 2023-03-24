@@ -23,7 +23,7 @@ export const TemplateScreen: FCC<TemplateScreenProps> = ({ children, title = '' 
     <TemplateContent>
       <Brand />
       <Row>
-        <Col xs={12} sm={12} md={3} lg={3} xlg={3} smOrder={2}>
+        <Col xs={12} sm={12} md={4} lg={3} xlg={3} smOrder={2}>
           <FormContainer>
             <PanelHeader />
             <PanelBody />
@@ -33,7 +33,7 @@ export const TemplateScreen: FCC<TemplateScreenProps> = ({ children, title = '' 
             </Info>
           </FormContainer>
         </Col>
-        <Col xs={12} sm={12} md={9} lg={9} xlg={9} smOrder={1}>
+        <Col xs={12} sm={12} md={8} lg={9} xlg={9} smOrder={1}>
           <BannerContainer>
             <BannerImage>
               <Img

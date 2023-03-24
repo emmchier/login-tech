@@ -2,6 +2,11 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   width: 100%;
+  max-width: 360px;
+
+  @media only screen and (${({ theme }) => theme.breakpoints.tablet}) {
+    max-width: 100%;
+  }
 `;
 
 export const InputGroup = styled.div`

@@ -24,7 +24,7 @@ export const BrandContent = styled.div`
 
   @media only screen and (${({ theme }) => theme.breakpoints.mobile}) {
     margin-top: ${({ theme }) => theme.spacing(4)};
-    margin-bottom: ${({ theme }) => theme.spacing(0)};
+    margin-bottom: 0;
     position: relative;
   }
 `;

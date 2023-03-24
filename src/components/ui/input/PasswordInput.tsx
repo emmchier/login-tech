@@ -15,6 +15,7 @@ export const PasswordInput: FC<InputTypes> = ({
   supportingType = 'error',
   supportingText = 'Este campo no debe estar vacío',
   isError = false,
+  isRequiredLabel = false,
   required = false,
   disabled = false,
   onChange,
@@ -48,6 +49,7 @@ export const PasswordInput: FC<InputTypes> = ({
         supportingType={supportingType}
         supportingText={supportingText}
         isError={isError}
+        isRequiredLabel={isRequiredLabel}
         required={required}
         disabled={disabled}
         onChange={onChange}
